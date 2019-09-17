@@ -1,7 +1,7 @@
 # sorting-algorithms-javascript
-Implementation of sorting algorithms in javascript
+#### Implementation of sorting algorithms in javascript
 
-##Selection Sort O(n2)
+### Selection Sort O(n2)
 
 ```
 function selectionSort(arr){
@@ -24,7 +24,7 @@ function selectionSort(arr){
 	return arr;
 }
 ```
-## Bubble Sort O(n2)
+### Bubble Sort O(n2)
 
 ```
 function bubbleSort(arr){
