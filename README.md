@@ -3,7 +3,8 @@ Implementation of sorting algorithms in javascript
 
 ##Selection Sort O(n2)
 
-```function selectionSort(arr){
+```
+function selectionSort(arr){
 	let min;
 	let findMin = function(index){
 		let min = {index : index, val : arr[index]};
@@ -21,4 +22,5 @@ Implementation of sorting algorithms in javascript
 		arr[min.index] = temp;
 	}
 	return arr;
-}```
+}
+```
