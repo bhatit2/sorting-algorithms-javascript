@@ -40,3 +40,31 @@ for(var i = 0; i < arr.length; i++){
 return arr;
 }
 ```
+
+### Merge Sort O(nlogn)
+
+#### Merge function
+```
+function merge(listA, listB){
+	let res = [];
+	let i = 0 ,j = 0;
+        while(i < listA.length || j < listB.length){
+			if(i === listA.length){
+				res.push(...listB.splice(j));
+				break;
+			}
+			if(j === listB.length){
+				res.push(...listA.splice(i));
+				break;
+			}
+			if(listA[i] < listB[j]){
+				res.push(listA[i])
+				i++
+			} else {
+				res.push(listB[j])
+				j++
+			}
+        }
+	return res;
+}
+```
