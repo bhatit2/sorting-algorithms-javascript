@@ -68,3 +68,16 @@ function merge(listA, listB){
 	return res;
 }
 ```
+#### Merge Sort
+```
+function mergeSort(arr){
+	if(arr.length > 1){ 
+		var mid = parseInt(arr.length/2);
+        var leftArr = mergeSort(arr.slice(0,mid));
+        var rightArr = mergeSort(arr.slice(mid, arr.length));
+        return merge(leftArr, rightArr); 
+	} else {
+		return arr;
+	}
+}
+```
