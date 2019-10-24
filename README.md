@@ -70,14 +70,14 @@ function merge(listA, listB) {
 ```
 #### Merge Sort
 ```
-function mergeSort(arr){
-	if(arr.length > 1){ 
-		var mid = parseInt(arr.length/2);
-        var leftArr = mergeSort(arr.slice(0,mid));
-        var rightArr = mergeSort(arr.slice(mid, arr.length));
-        return merge(leftArr, rightArr); 
-	} else {
-		return arr;
-	}
+function mergeSort(arr) {
+  if (arr.length < 2) {
+    return arr; }
+  else {
+    var midpoint = parseInt(arr.length / 2);
+    var leftArr   = arr.slice(0, midpoint);
+    var rightArr  = arr.slice(midpoint, arr.length);
+    return merge(mergesort(leftArr), mergesort(rightArr));
+  }
 }
 ```
