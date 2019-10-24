@@ -45,27 +45,27 @@ return arr;
 
 #### Merge function
 ```
-function merge(listA, listB){
-	let res = [];
-	let i = 0 ,j = 0;
-        while(i < listA.length || j < listB.length){
-			if(i === listA.length){
-				res.push(...listB.splice(j));
-				break;
-			}
-			if(j === listB.length){
-				res.push(...listA.splice(i));
-				break;
-			}
-			if(listA[i] < listB[j]){
-				res.push(listA[i])
-				i++
-			} else {
-				res.push(listB[j])
-				j++
-			}
+function merge(listA, listB) {
+    let res = [];
+    let i = 0, j = 0;
+    while (i < listA.length || j < listB.length) {
+        if (i === listA.length) {
+            let remainingArr = listB.splice(j);
+            return res.concat(remainingArr);
         }
-	return res;
+        if (j === listB.length) {
+            let remainingArr = listA.splice(i);
+            return res.concat(remainingArr);
+        }
+        if (listA[i] < listB[j]) {
+            res.push(listA[i])
+            i++
+        } else {
+            res.push(listB[j])
+            j++
+        }
+    }
+    return res;
 }
 ```
 #### Merge Sort
