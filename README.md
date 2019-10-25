@@ -71,13 +71,13 @@ function merge(listA, listB) {
 #### Merge Sort
 ```
 function mergeSort(arr) {
-  if (arr.length < 2) {
-    return arr; }
-  else {
-    var midpoint = parseInt(arr.length / 2);
-    var leftArr   = arr.slice(0, midpoint);
-    var rightArr  = arr.slice(midpoint, arr.length);
-    return merge(mergesort(leftArr), mergesort(rightArr));
-  }
+    if (arr.length < 2) {
+        return arr;
+    } else {
+        var midpoint = parseInt(arr.length / 2);
+        var leftArr = arr.slice(0, midpoint);
+        var rightArr = arr.slice(midpoint, arr.length);
+        return merge(mergeSort(leftArr), mergeSort(rightArr));
+    }
 }
 ```
